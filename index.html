@@ -1,0 +1,60 @@
+ 
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+      </style>
+    <title>Image recognition</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src = "https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+  <div class="container">
+    
+    <center>
+      <h3 class = "btn btn-default heading"> Image Recognition </h3>
+      <br><br>
+      <p style = "font-size: 22px; color: lightcoral;"> Model is trained to identify the following objects: </p>
+      <b class = "name_of_object" style = "color: lightsalmon;">
+        Dad
+        <hr>
+        Mum
+        <hr>
+        Me
+        <hr>
+        Brother
+        <hr>
+      </b>
+      <label style = "color: lightslategrey;"> Webcam View - </label>
+      <div id = "camera"></div>
+      <br><br>
+      <div id = "result"></div>
+      <br><br>
+      <button onclick = "takeSnapshot();" class = "btn btn-info"> Capture Image </button>
+      <br><br>
+      <button onclick = "check();" class = "btn btn-success"> Identify Image </button>
+      <br><br>
+      <p style = "font-size: 22px;" >Person : <span id = "result_object_name" style = "color: lightseagreen;"></span></p>
+      <p style = "font-size: 22px;">Accuracy : <span id = "result_object_accuracy" style = "color: lightseagreen;"></span></p>
+      <br>
+      <h4 style = "font-size: 22px;">Notes:</h4>
+      <h4>0.250 and below = "Who is this?"</h4>
+      <h4>0.500 to 0.750 = "I think I know who it is!"</h4>
+      <h4>0.750 to 0.999 = "I'm pretty sure I know who this is!"</h4>
+      <h4>1.000 = "I'm 100% sure!"</h4>
+    </center>
+
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
